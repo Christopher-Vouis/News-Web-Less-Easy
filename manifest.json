@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "News Web Less Easy ",
+  "description": "Expands News Web Easy's furigana display options",
+  "version": "1.0",
+    "permissions": [
+    "webNavigation"
+  ],
+    "background": {
+    "service_worker": "background.js"
+  },
+    "content_scripts": [
+		{
+		  "matches": ["https://www3.nhk.or.jp/news/easy/*"],
+		  "js": ["content.js"]
+		}
+	]
+}
